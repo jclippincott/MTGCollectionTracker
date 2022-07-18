@@ -1,9 +1,9 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace TCGPlayerApiWrapper.Models.DTOs; 
+namespace TCGPlayerApiWrapper.Models.DatabaseModels; 
 
-public class MtgSetDTO {
+public class SetDTO {
     
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
@@ -20,6 +20,8 @@ public class MtgSetDTO {
     public string PublishedOn { get; set; }
     
     public string ModifiedOn { get; set; }
+    
+    public string? SetSymbolImageUrl { get; set; }
 
 
 }
